@@ -1,0 +1,41 @@
+{
+  "model_type": "K-Means Clustering",
+  "n_clusters": 5,
+  "random_state": 42,
+  "n_init": 20,
+  "max_iter": 300,
+  "algorithm": "lloyd",
+  "n_samples": 2980,
+  "n_features": 3,
+  "metrics": {
+    "inertia": 1814.0968915072613,
+    "silhouette_score": 0.4639663067795154,
+    "davies_bouldin_index": 0.6281303193854078,
+    "n_iter": 8,
+    "blue_ocean_score_max": 70.0
+  },
+  "feature_cols": [
+    "price_normalized",
+    "rating_normalized",
+    "popularity_score"
+  ],
+  "preprocessing": {
+    "price": {
+      "min": 1000.0,
+      "max": 72460000.0,
+      "formula": "(original_price - min) / (max - min)"
+    },
+    "rating": {
+      "min": 0.0,
+      "max": 5.0,
+      "formula": "(original_rating - min) / (max - min)"
+    },
+    "popularity": {
+      "formula": "Already computed in gold.product_features",
+      "note": "Use log((quantity_sold * 0.7) + (review_count * 0.3) + 1) then normalize"
+    }
+  },
+  "data_source": "gold.product_features",
+  "timestamp": "20260419_150808",
+  "save_location": "/Workspace/Shared/models/"
+}

@@ -1,0 +1,55 @@
+# 
+# TIKI RAG API - Python Dependencies
+# 
+
+# FastAPI and server
+fastapi
+uvicorn[standard]
+python-multipart
+httpx
+starlette
+
+# Pydantic for settings and validation
+pydantic
+pydantic[dotenv]
+
+# Data processing
+pandas
+numpy
+scipy
+
+# LangChain and RAG components
+langchain
+chromadb
+sentence-transformers
+langchain-community
+
+# Embeddings & NLP
+transformers
+tokenizers
+huggingface-hub
+torch
+onnxruntime
+
+# Google Gemini
+google-generativeai
+
+# Machine Learning (for loading Prophet, KMeans)
+scikit-learn
+prophet
+
+# Version fixes
+protobuf<5.0.0,>=3.19.5
+tenacity<9.0.0,>=8.1.0
+packaging<24.0,>=23.2
+typing-extensions>=4.5.0
+grpcio>=1.59.0
+grpcio-status>=1.59.0
+
+# Utilities
+python-dotenv
+groq
+
+# Search Engine (lightweight, no GPU needed)
+rank-bm25          # BM25 scoring (pure Python)
+rapidfuzz          # Fast fuzzy matching for typo tolerance

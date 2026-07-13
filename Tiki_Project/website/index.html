@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce AI Analytics - Microservices Demo</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+    <!-- Libraries for Export PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        /* ========== FRESH BLUE LIGHT THEME ========== */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eff6ff;
+            color: #1e293b;
+        }
+
+        /* Custom Scrollbar - Light theme */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #dbeafe; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+
+        .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Glass panels - Light mode */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.08);
+        }
+
+        /* Gradient backgrounds - BLUE THEME */
+        .gradient-header {
+            background: linear-gradient(135deg, #f0f9ff 0%, #eff6ff 100%);
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+        }
+
+        .gradient-kpi-1 {
+            background: linear-gradient(135deg, #f0f9ff 0%, #bfdbfe 100%);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+        }
+        .gradient-kpi-2 {
+            background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+        .gradient-kpi-3 {
+            background: linear-gradient(135deg, #f0f9ff 0%, #bfdbfe 100%);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+        }
+        .gradient-kpi-4 {
+            background: linear-gradient(135deg, #f5f3ff 0%, #dbeafe 100%);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+        }
+
+        /* Highlight for top products */
+        .top-product-highlight {
+            background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+            border-left: 4px solid #3b82f6;
+        }
+
+        /* AI Insight gradient */
+        .ai-insight-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        /* Sidebar style - BLUE BACKGROUND */
+        .sidebar-modern {
+            background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-right: 1px solid #bfdbfe;
+            box-shadow: 2px 0 12px rgba(59, 130, 246, 0.12);
+        }
+
+        /* Card panels light */
+        .card-panel {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(59,130,246,0.07);
+        }
+
+        /* Smooth transitions */
+        * {
+            transition-property: background-color, border-color, color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        button {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 200ms;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        // Set your public backend URL when deploying static frontend (GitHub Pages).
+        // Example: window.__API_BASE_URL__ = 'https://your-backend.onrender.com';
+        window.__API_BASE_URL__ = window.__API_BASE_URL__ || '';
+    </script>
+
+    <!-- Shared utilities (Icon, calculateKPI, API, renderResult, buildPdfHtml) -->
+    <script src="utils.js?v=20260606" type="text/babel"></script>
+
+    <!-- Page components — load before App shell -->
+    <script src="pages/single-page.js?v=20260606" type="text/babel"></script>
+    <script src="pages/batch-page.js?v=20260606" type="text/babel"></script>
+    <script src="pages/market-insight-page.js?v=20260606" type="text/babel"></script>
+    <script src="pages/market-report-page.js?v=20260606" type="text/babel"></script>
+
+    <!-- App shell (sidebar + header + routing) -->
+    <script src="app.js?v=20260606" type="text/babel"></script>
+</body>
+</html>
+

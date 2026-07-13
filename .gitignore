@@ -1,0 +1,64 @@
+# Môi trường ảo (Virtual Environments)
+venv/
+.venv/
+env/
+ENV/
+node_modules/
+**/node_modules/
+
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Biến môi trường và cấu hình bảo mật
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.setting
+
+# Thư mục cấu hình IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# File log và cache hệ thống
+*.log
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Cấu hình riêng cho dự án Tiki AI ---
+# Tránh push các cơ sở dữ liệu vector hoặc database lớn lên Git
+**/chroma_db/
+**/chroma.sqlite3
+**/data_level0.bin
+
+# Tránh push các file weights của model học máy siêu lớn (>50MB)
+**/*.safetensors
+**/*.bin
+**/*.pkl
+
+# Tránh push các bộ dữ liệu raw quá lớn trong thư mục new_data
+**/Tiki_Project/new_data/
+
+# Bỏ qua các file JSON test tạm thời và script nháp trong api/
+**/Tiki_Project/api/test_*.json
+**/Tiki_Project/api/search_review.py
+**/Tiki_Project/api/review_debug.txt
+**/Tiki_Project/api/sample_keywords.csv
+

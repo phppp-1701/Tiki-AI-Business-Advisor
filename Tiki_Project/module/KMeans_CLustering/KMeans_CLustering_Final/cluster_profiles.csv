@@ -1,0 +1,8 @@
+,product_id,price_normalized,price_normalized,rating_normalized,rating_normalized,popularity_score,popularity_score,price_original,price_original,price_original,price_original,rating_original,rating_original,category
+,count,mean,std,mean,std,mean,std,mean,median,min,max,mean,median,<lambda>
+cluster,,,,,,,,,,,,,,
+0,842,0.014,0.077,4.705,0.475,3.023,0.602,1006230.531,137750.0,2000,72460000,4.705,5.0,do-gia-dung
+1,638,0.007,0.033,4.774,0.244,6.248,0.566,473929.835,134500.0,5000,34490000,4.774,4.8,sach-truyen
+2,321,0.006,0.033,4.826,0.212,8.543,0.881,445419.67,118000.0,2000,37550000,4.826,4.8,sach-truyen
+3,222,0.004,0.018,0.064,0.304,2.75,1.36,320708.297,99000.0,1000,14490000,0.064,0.0,sach-truyen
+4,957,0.01,0.072,4.634,0.428,4.543,0.456,709389.405,134500.0,2000,71785000,4.634,4.7,sach-truyen
