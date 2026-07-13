@@ -6,7 +6,7 @@ Hệ thống cho phép người dùng tìm kiếm sản phẩm, xem báo cáo xu
 
 ---
 
-## 📁 Cấu Trúc Thư Mục (Đã Tối Ưu Sạch Sẽ)
+## 📁 Cấu Trúc Thư Mục 
 
 ```
 Project_Cloud/
