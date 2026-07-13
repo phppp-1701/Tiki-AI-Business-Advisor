@@ -124,3 +124,13 @@ Dự án cung cấp sẵn script PowerShell [run-local.ps1](file:///c:/Users/din
    * Sử dụng mô hình K-Means để phân cụm sản phẩm theo phân khúc giá và độ phổ biến.
    * Tính toán điểm cơ hội kinh doanh (Opportunity Score) giúp xác định những thị trường ngách màu mỡ (Thị trường Đại dương xanh).
    * Mô hình Prophet dự đoán doanh thu tiềm năng trong tương lai.
+## 👥 Nhóm Tác Giả (Authors)
+
+Dự án được nghiên cứu và phát triển bởi nhóm sinh viên **Trường Đại học Công Nghiệp TP. Hồ Chí Minh (IUH)**, chuyên ngành **Khoa Học Máy Tính - Khóa K18**:
+
+| STT | Họ và Tên | Mã số sinh viên (MSSV) |
+| :---: | :--- | :---: |
+| 1 | **PHẠM TRƯƠNG HOÀNG PHƯƠNG** | `22679101` |
+| 2 | **HOÀNG ĐÌNH HUY** | `22669751` |
+| 3 | **NGÔ VĂN NINH** | `22699421` |
+| 4 | **ĐỖ MINH THƯ** | `22658841` |
